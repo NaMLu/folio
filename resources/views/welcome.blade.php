@@ -25,6 +25,7 @@
     <![endif]-->
     <link rel="stylesheet" href="{{URL::asset('assets/css/bootstrap.min.css')}}"/>
     <link rel="stylesheet" href="{{URL::asset('assets/css/isotope.css')}}"/>
+    <link rel="stylesheet" href="{{URL::asset('assets/css/MDicon.min.css')}}"/>
     <link rel="stylesheet" href="{{URL::asset('assets/js/fancybox/jquery.fancybox.css')}}"/>
     <link rel="stylesheet" href="{{URL::asset('assets/css/da-slider.css')}}"/>
     <link rel="stylesheet" href="{{URL::asset('assets/js/owl-carousel/owl.carousel.css')}}"/>
@@ -134,7 +135,7 @@
         <div class="row">
             <!-- item -->
             <div class="col-md-4 text-center tileBox">
-                <div class="txtHead"><i class="fa fa-desktop"></i>
+                <div class="txtHead"><i class="mdicon man-cycling "></i>
 
                     <h3>Responsive <span class="id-color">Design</span></h3></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt
@@ -144,7 +145,7 @@
 
             <!-- item -->
             <div class="col-md-4 text-center tileBox">
-                <div class="txtHead"><i class="fa fa-css3"></i>
+                <div class="txtHead"><i class="mdicon shining-sun"></i>
 
                     <h3>HTML5/CSS3 <span class="id-color">Dev</span></h3></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt
@@ -154,7 +155,7 @@
 
             <!-- item -->
             <div class="col-md-4 text-center tileBox">
-                <div class="txtHead"><i class="fa fa-lightbulb-o"></i>
+                <div class="txtHead"><i class="mdicon fill-mood"></i>
 
                     <h3>JavaScript <span class="id-color">jQuery</span></h3></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt

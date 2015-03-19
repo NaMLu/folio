@@ -420,9 +420,10 @@ background:#fff;
 background:#fff;
 padding:20px 10px;
 }
-#aboutUs .txtHead .fa {
-font-size: 58px;
+#aboutUs .txtHead .mdicon, #aboutUs .txtHead .fa {
+font-size: 68px;
 color: #5E5E5E;
+    margin-top: 20px;
 }
 .tileBox p{
     background-color: #f0f0f0;
