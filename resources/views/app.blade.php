@@ -10,6 +10,7 @@
     <link href="{{ asset('/backend/bower_components/metisMenu/dist/metisMenu.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/backend/css/sb-admin-2.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/MDicon.min.css')}}"/>
     <link href="{{ asset('/css/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/backend/summernote/summernote.css') }}" rel="stylesheet">
     <link href="{{ asset('/backend/summernote/summernote-bs3.css') }}" rel="stylesheet">

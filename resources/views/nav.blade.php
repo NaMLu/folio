@@ -181,7 +181,7 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="{{route('view-all-messages')}}"><i class="fa fa-envelope fa-fw"></i> VIew Messages</a>
+                    <a href="{{route('view-all-messages')}}"><i class="mdicon write-email-envelope"></i> VIew Messages</a>
                 </li>
             </ul>
         </div>
