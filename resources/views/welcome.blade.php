@@ -333,14 +333,6 @@
                             </article>
                         @endforeach
                     </div>
-                    <script>
-                        $(document).ready(function () {
-                            function myFunction() {
-                                document.getElementById("showall").click(); // Click on the checkbox
-                            }
-                        });
-
-                    </script>
                 </div>
 
 
@@ -473,5 +465,12 @@
 <script src="{{URL::asset('assets/js/custom.js')}}"></script>
 <script src="{{URL::asset('assets/js/contact.js')}}"></script>
 <script src="{{URL::asset('assets/js/owl-carousel/owl.carousel.js')}}"></script>
+<script>
+    $(document).ready(function () {
+        function myFunction() {
+            document.getElementById("showall").click(); // Click on the checkbox
+        }
+    });
+</script>
 </body>
 </html>
