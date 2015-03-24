@@ -32,7 +32,8 @@
     <link href="{{ asset('/css/animate.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{URL::asset('assets/css/styles.css')}}"/>
     <link rel="stylesheet" href="{{URL::asset('assets/font/css/font-awesome.min.css')}}"/>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
 
 </head>
 
