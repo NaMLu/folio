@@ -31,7 +31,7 @@ class WelcomeController extends Controller {
 	 * @return Response
 	 */
 	public function index()
-	{	$items =  Work::with('categories')->take(9)->get();
+	{	$items =  Work::with('categories')->orderBy('id','desc')->take(9)->get();
 	// dd($items);
 		$categories =  Category::all();
 		return view('welcome', compact('items','categories'));

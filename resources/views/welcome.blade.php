@@ -429,13 +429,14 @@
                                     <img class="img img-responsive" src="assets/images/portfolio/img3.jpg" alt=""/>
                                 </div>
                                 <div class="col-md-8">
-                                    <p>{{$item->description}}</p>
+                                    <p>{!!$item->description!!}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">link</button>
+                            <h4>
+                                <a target="_blank" href="{{$item->link}}">check {{$item->name}} out</a>
+                            </h4>
                         </div>
                     </div>
                     <!-- /.modal-content -->
