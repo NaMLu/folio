@@ -320,7 +320,7 @@
                             <?php endforeach;?>
                             <article class="col-sm-4 isotopeItem {{implode(" ",$arr)}}">
                                 <div class="portfolio-item">
-                                    <img src="assets/images/portfolio/img1.jpg" alt=""/>
+                                    <img src="assets/images/portfolio/img{{rand(1,9)}}.jpg" alt=""/>
 
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info" data-toggle="modal" data-target="#modal{{$item->id}}">

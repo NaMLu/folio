@@ -370,6 +370,7 @@ background: none;
     padding-bottom: 15px;
     margin-bottom: 30px;
     display: block;
+    text-transform: uppercase;
 }
 
     .heading p {
