@@ -67,19 +67,13 @@
             <li>
                 <a href="javascript:;">Portfolio</a>
                 <ul class="child-menu">
-                    <li><a href="/portfolio/"><i class="fa fa-list-alt"></i> <span class="text-center">View all</span></a></li>
-                    <li><a href="{{route('create-new-item')}}"><i class="fa fa-file-o"></i> <span class="text-center">Add New</span></a></li>
+                    <li><a href="/portfolio/"><span class="text-center">View all</span><i class="fa fa-list-alt pull-right"></i></a></li>
+                    <li><a href="{{route('create-new-item')}}"><span class="text-center">Add New</span><i class="fa fa-file-o pull-right"></i></a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="javascript:;">Messages</a>
-                <ul class="child-menu">
-                    <li><a href="{{route('view-all-messages')}}"><i class="mdicon write-email-envelope fa-fw"></i> VIew Messages</a></li>
-                    <li><a href="panels-draggable.html">Draggable Panels</a></li>
-                    <li><a href="panels-styling.html">Styled Panels</a></li>
-                    <li><a href="panels-ajax.html">Ajax Panels</a></li>
-                </ul>
+                <a href="{{route('view-all-messages')}}">Messages <i class="fa fa-list-alt pull-right"></i></a>
             </li>
             <li>
                 <a href="javascript:;">Grids</a>

@@ -1,23 +1,33 @@
 @extends('app')
 
+@section('page-header')
+    <div class="page-header full-content">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Dashboard:
+                    <small>View All Messages</small>
+                </h1>
+            </div>
+            <!--.col-->
+        </div>
+        <!--.row-->
+    </div>
+@endsection
+
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Messages</h1>
-            </div>
-        </div>
-        <div class="row">
-            <table class="table table-hover">
-                <tr>
-                    <th>From</th>
-                    <th>Email</th>
-                    <th>Received on</th>
-                    <th>Quote</th>
-                    <th>Read</th>
-                    <th>Replied</th>
-                    <th>View</th>
-                </tr>
+            <table class="table table-hover" id="messages_table">
+                <thead>
+                <th>From</th>
+                <th>Email</th>
+                <th>Received on</th>
+                <th>Quote</th>
+                <th>Read</th>
+                <th>Replied</th>
+                <th>View</th>
+                </thead>
+                <tbody>
                 @foreach($messages as $item)
                     <tr>
                         <td>
@@ -55,13 +65,20 @@
                         </td>
                     </tr>
                 @endforeach
+                </tbody>
             </table>
         </div>
     </div>
 @endsection
 
 @section('footer-js')
+    <!-- BEGIN PLUGINS AREA -->
+    <script src="/backend/assets/globals/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="/backend/assets/globals/plugins/datatables/themes/bootstrap/dataTables.bootstrap.js"></script>
+    <!-- END PLUGINS AREA -->
     <script>
-
+        $(document).ready(function () {
+            $('#messages_table').DataTable();
+        });
     </script>
 @endsection
