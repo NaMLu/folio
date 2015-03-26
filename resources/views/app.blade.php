@@ -29,22 +29,19 @@
     <![endif]-->
 </head>
 <body>
-    <div id="wrapper">
+<div id="wrapper">
 
-        <!-- Navigation -->
-
+    <!-- Navigation -->
+    @if(Auth::Check())
         @include('nav')
+    @endif
 
-        <!-- Page Content -->
+                <!-- Page Content -->
         <div class="content">
-
-            <div class="page-header full-content">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h1>Blank Page <small>short description</small></h1>
-                    </div><!--.col-->
-                </div><!--.row-->
-            </div><!--.page-header-->
+            @if(Auth::Check())
+                @yield('page-header')
+            @endif
+            <!--.page-header-->
 
             <!-- content -->
             <div class="row">
@@ -53,46 +50,30 @@
             </div>
             <!-- content -->
 
-            <div class="footer-links margin-top-40">
-                <div class="row no-gutters">
-                    <div class="col-xs-6 bg-indigo">
-                        <a href="pages-timeline.html">
-                            <span class="state">Pages</span>
-                            <span>Timeline</span>
-                            <span class="icon"><i class="ion-android-arrow-back"></i></span>
-                        </a>
-                    </div><!--.col-->
-                    <div class="col-xs-6 bg-cyan">
-                        <a href="components-offline-detector.html">
-                            <span class="state">Components</span>
-                            <span>Offline Detector</span>
-                            <span class="icon"><i class="ion-android-arrow-forward"></i></span>
-                        </a>
-                    </div><!--.col-->
-                </div><!--.row-->
-            </div><!--.footer-links-->
+
+            <!--.footer-links-->
 
         </div>
 
-            <!-- Scripts -->
-    <script src="/backend/assets/globals/js/global-vendors.js"></script>
-    <script src="/backend/assets/globals/js/pleasure.js"></script>
-    <script src="{{ asset('/backend/summernote/summernote.min.js') }}"></script>
-    <script src="{{ asset('/backend/assets/admin1/js/layout.js') }}"></script>
+        <!-- Scripts -->
+        <script src="/backend/assets/globals/js/global-vendors.js"></script>
+        <script src="/backend/assets/globals/js/pleasure.js"></script>
+        <script src="{{ asset('/backend/summernote/summernote.min.js') }}"></script>
+        <script src="{{ asset('/backend/assets/admin1/js/layout.js') }}"></script>
 
-    <!-- BEGIN INITIALIZATION-->
-    <script>
-        $(document).ready(function () {
-            Pleasure.init();
-            Layout.init();
-        });
-    </script>
-    <!-- END INITIALIZATION-->
-    @yield('footer-js')
-    <script>
-        setTimeout(function(){
-            $('#flash-msg-div').addClass('fadeOut');
-        }, 5000);
-    </script>
+        <!-- BEGIN INITIALIZATION-->
+        <script>
+            $(document).ready(function () {
+                Pleasure.init();
+                Layout.init();
+            });
+        </script>
+        <!-- END INITIALIZATION-->
+        @yield('footer-js')
+        <script>
+            setTimeout(function () {
+                $('#flash-msg-div').addClass('fadeOut');
+            }, 5000);
+        </script>
 </body>
 </html>

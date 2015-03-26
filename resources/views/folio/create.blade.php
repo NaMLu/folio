@@ -1,10 +1,24 @@
 @extends('app')
 
+@section('page-header')
+    <div class="page-header full-content">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Dashboard:
+                    <small>Create New Portfolio Item</small>
+                </h1>
+            </div>
+            <!--.col-->
+        </div>
+        <!--.row-->
+    </div>
+@endsection
+
 @section('content')
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
+                <div class="panel blue">
                     <div class="panel-heading text-center"><h5>create new</h5></div>
                     <div class="panel-body">
                         @if (count($errors) > 0)

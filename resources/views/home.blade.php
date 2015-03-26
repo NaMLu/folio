@@ -1,103 +1,66 @@
 @extends('app')
+@section('page-header')
+    <div class="page-header full-content">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Dashboard Home
+                    <small>Home</small>
+                </h1>
+            </div>
+            <!--.col-->
+        </div>
+        <!--.row-->
+    </div>
+@endsection
 
 @section('content')
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Dashboard</h1>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-
         <div class="row animated fadeIn">
-            <div class="col-lg-3 col-md-6">
-                <div class="panel panel-primary">
+
+            <div class="col-md-3">
+                <div class="panel red">
                     <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i class="fa fa-comments fa-5x"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">26</div>
-                                <div>New Comments!</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="panel panel-green">
+                        <div class="panel-title"><h4>RED</h4></div>
+                    </div><!--.panel-heading-->
+                    <div class="panel-body">
+                        <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
+                    </div><!--.panel-body-->
+                </div><!--.panel-->
+            </div><!--.col-->
+
+            <div class="col-md-3">
+                <div class="panel pink">
                     <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i class="fa fa-tasks fa-5x"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">12</div>
-                                <div>New Tasks!</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="panel panel-yellow">
+                        <div class="panel-title"><h4>PINK</h4></div>
+                    </div><!--.panel-heading-->
+                    <div class="panel-body">
+                        <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
+                    </div><!--.panel-body-->
+                </div><!--.panel-->
+            </div><!--.col-->
+
+            <div class="col-md-3">
+                <div class="panel purple">
                     <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i class="fa fa-shopping-cart fa-5x"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">124</div>
-                                <div>New Orders!</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="panel panel-red">
+                        <div class="panel-title"><h4>PURPLE</h4></div>
+                    </div><!--.panel-heading-->
+                    <div class="panel-body">
+                        <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
+                    </div><!--.panel-body-->
+                </div><!--.panel-->
+            </div><!--.col-->
+
+            <div class="col-md-3">
+                <div class="panel deep-purple">
                     <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i class="fa fa-support fa-5x"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">13</div>
-                                <div>Support Tickets!</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+                        <div class="panel-title"><h4>DEEP PURPLE</h4></div>
+                    </div><!--.panel-heading-->
+                    <div class="panel-body">
+                        <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
+                    </div><!--.panel-body-->
+                </div><!--.panel-->
+            </div><!--.col-->
+
         </div>
 
     </div>

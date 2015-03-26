@@ -65,19 +65,17 @@
                 <a href="index-2.html">Dashboard</a>
             </li>
             <li>
-                <a href="javascript:;">Cards</a>
+                <a href="javascript:;">Portfolio</a>
                 <ul class="child-menu">
-                    <li><a href="cards-image.html">Image Cards</a></li>
-                    <li><a href="cards-audio.html">Audio Cards</a></li>
-                    <li><a href="cards-video.html">Video Cards</a></li>
-                    <li><a href="cards-clickable.html">Clickable Cards</a></li>
+                    <li><a href="/portfolio/"><i class="fa fa-list-alt"></i> <span class="text-center">View all</span></a></li>
+                    <li><a href="{{route('create-new-item')}}"><i class="fa fa-file-o"></i> <span class="text-center">Add New</span></a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="javascript:;">Panels</a>
+                <a href="javascript:;">Messages</a>
                 <ul class="child-menu">
-                    <li><a href="panels.html">Panel Types</a></li>
+                    <li><a href="{{route('view-all-messages')}}"><i class="mdicon write-email-envelope fa-fw"></i> VIew Messages</a></li>
                     <li><a href="panels-draggable.html">Draggable Panels</a></li>
                     <li><a href="panels-styling.html">Styled Panels</a></li>
                     <li><a href="panels-ajax.html">Ajax Panels</a></li>
@@ -109,12 +107,9 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;">E-mail Templates</a>
-                <ul class="child-menu">
-                    <li><a href="email-basic.html" target="_blank">Basic Template</a></li>
-                    <li><a href="email-invoice.html" target="_blank">Invoice Template</a></li>
-                    <li><a href="email-list.html" target="_blank">List Template</a></li>
-                </ul>
+                <a href="{{ url('/auth/logout') }}">
+                    <i class="fa fa-sign-out fa-fw"></i> Logout
+                </a>
             </li>
         </ul>
     </div>

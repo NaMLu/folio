@@ -1,10 +1,18 @@
 @extends('app')
 
 @section('content')
+    <style>
+        .content{
+            padding:0 !important;
+        }
+        .panel-login{
+        background: rgba(0, 0, 0, 0.4);
+        }
+    </style>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4 login-box">
-			<div class="panel panel-default animated fadeInUp">
+		<div class="col-md-4 col-md-offset-4 login-box login-screen">
+			<div class=" panel-login blur-content animated fadeInUp">
 				<div class="panel-heading text-center"><h3>Login</h3></div>
 				<div class="panel-body">
 					<form class="form" role="form" method="POST" action="{{ url('/auth/login') }}">
@@ -12,7 +20,7 @@
 
 						<div class="form-group">
 							<label class=" control-label">E-Mail Address</label>
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
+								<input type="email" class="form-control" name="email" value="{{ old('email') }}" autocomplete="off">
 						</div>
 
 						<div class="form-group">
