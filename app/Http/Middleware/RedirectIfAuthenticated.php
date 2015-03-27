@@ -4,41 +4,43 @@ use Closure;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\RedirectResponse;
 
-class RedirectIfAuthenticated {
+class RedirectIfAuthenticated
+{
 
-	/**
-	 * The Guard implementation.
-	 *
-	 * @var Guard
-	 */
-	protected $auth;
+    /**
+     * The Guard implementation.
+     *
+     * @var Guard
+     */
+    protected $auth;
 
-	/**
-	 * Create a new filter instance.
-	 *
-	 * @param  Guard  $auth
-	 * @return void
-	 */
-	public function __construct(Guard $auth)
-	{
-		$this->auth = $auth;
-	}
+    /**
+     * Create a new filter instance.
+     *
+     * @param  Guard $auth
+     * @return void
+     */
+    public function __construct(Guard $auth)
+    {
+        $this->auth = $auth;
+    }
 
-	/**
-	 * Handle an incoming request.
-	 *
-	 * @param  \Illuminate\Http\Request  $request
-	 * @param  \Closure  $next
-	 * @return mixed
-	 */
-	public function handle($request, Closure $next)
-	{
-		if ($this->auth->check())
-		{   flash()->success('You have logged in mate!');
-			return new RedirectResponse(url('/home'));
-		}
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Closure $next
+     * @return mixed
+     */
+    public function handle($request, Closure $next)
+    {
+        if ($this->auth->check()) {
+//            flash()->success('You have logged in mate!');
 
-		return $next($request);
-	}
+            return new RedirectResponse(url('/home'));
+        }
+
+        return $next($request);
+    }
 
 }
