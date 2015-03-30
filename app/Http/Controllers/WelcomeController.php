@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use App\Category;
 use App\Work;
+use App\Skill;
 
 class WelcomeController extends Controller {
 
@@ -32,9 +33,10 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{	$items =  Work::with('categories')->orderBy('id','desc')->take(9)->get();
-	// dd($items);
+        $skills_object = Skill::all()->toArray();
+        $skills = array_chunk((array)$skills_object,4,true);
 		$categories =  Category::all();
-		return view('welcome', compact('items','categories'));
+		return view('welcome', compact('items','categories','skills'));
 	}
 
 }
