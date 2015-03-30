@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+use App\Skill;
 
 class HomeController extends Controller {
 
@@ -29,8 +30,8 @@ class HomeController extends Controller {
 	 * @return Response
 	 */
 	public function index()
-	{
-		return view('home');
+	{   $skills = Skill::all();
+		return view('home',compact('skills'));
 	}
 
 }

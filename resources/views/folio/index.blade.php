@@ -17,25 +17,9 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            @foreach($items as $item)
-                <div class="col-md-3 animated FadeIn">
-                    <div class="panel indigo">
-                        <div class="panel-heading text-center">
-                            <div class="panel-title">
-                                <h5 class="small text-center">{{$item->name}}</h5>
-                            </div>
-                        </div>
-                        <div class="panel-body">
-                            <img class="img img-responsive" src="/assets/images/portfolio/img3.jpg" alt=""/>
-                        </div>
-                        <div class="panel-footer">
-                            <div class="small pull-left">
-                                <i class="ion-calendar"></i> : {{ Carbon::parse($item->created_at)->toFormattedDateString() }}
-                            </div>
-                            <div class="clearfix">
-                            </div>
-                        </div>
-                    </div>
+            @foreach($skills as $skill)
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{$skill->percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$skill->percentage}}%;">{{$skill->name}}</div>
                 </div>
             @endforeach
         </div>

@@ -113,7 +113,7 @@
     <!-- BEGIN SEARCH LAYER -->
     <div class="search-layer">
         <div class="search">
-            <form action="http://teamfox.co/themes/pleasure/app/admin1/pages-search-results.html">
+            <form action="/">
                 <div class="form-group">
                     <input type="text" id="input-search" class="form-control" placeholder="type something">
                     <button type="submit" class="btn btn-default disabled"><i class="ion-search"></i></button>

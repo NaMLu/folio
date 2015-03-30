@@ -3,11 +3,12 @@
 use App\Category;
 use App\Http\Requests;
 use App\Http\Requests\StoreWorkPostRequest;
+use App\Picture;
+use App\Skill;
 use App\Work;
 use Illuminate\Support\Facades\Input;
 use Response;
 use View;
-use App\Picture;
 
 class FolioController extends Controller
 {
@@ -19,7 +20,8 @@ class FolioController extends Controller
      */
     public function index()
     {
-        $items = Work::with('categories','pictures')->get();
+        $items = Work::with('categories', 'pictures')->get();
+
         return view('folio.index', compact('items'));
     }
 
@@ -68,13 +70,14 @@ class FolioController extends Controller
         $item->categories()->sync(Input::get('categories'));
 
 //        save photo URLS
-        foreach($paths as $pic){
+        foreach ($paths as $pic) {
             $p = new Picture();
             $p->work_id = $item->id;
             $p->link = $pic;
             $p->save();
         }
         flash()->success('Item successfully added to the portfolio!');
+
         return redirect('portfolio/create');
     }
 
@@ -122,4 +125,20 @@ class FolioController extends Controller
         //
     }
 
+    /**
+     *
+     */
+    public function storeSkill()
+    {
+        $data = Input::all();
+        $skill = new Skill();
+        $skill->name = $data['name'];
+        $skill->percentage = $data['percentage'];
+        $skill->save();
+        $data = [
+            'success' => TRUE,
+            'link' => $skill,
+        ];
+        return response()->json($data);
+    }
 }
