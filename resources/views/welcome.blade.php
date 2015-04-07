@@ -14,7 +14,7 @@
     <!--[if lt IE 9]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
-    <title>Folio</title>
+    <title>{{$site_options['site_name']}}</title>
     <meta name="description" content="">
     <meta name="author" content="bix">
     <!--[if lt IE 9]>
@@ -49,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand scroll-top logo"><b>Neu Profile</b></a>
+                <a href="#" class="navbar-brand scroll-top logo"><b>{{$site_options['site_name']}}</b></a>
             </div>
             <!--/.navbar-header-->
             <div id="main-nav" class="collapse navbar-collapse">
@@ -75,35 +75,16 @@
 
         <div class="container banner-content">
             <div id="da-slider" class="da-slider">
-                <div class="da-slide">
-                    <h2>Webdesigner</h2>
+                @foreach($slides as $slide)
+                    <div class="da-slide">
+                        <h2>{{$slide->name}}</h2>
 
-                    <p>Amazing free responsive website for free, enjoy!!!</p>
+                        <p>{{$slide->description}}</p>
 
-                    <div class="da-img"></div>
-                </div>
-                <div class="da-slide">
-                    <h2>UX/UI Developer</h2>
-
-                    <p>I develop website using Bootstrap front-end framework..</p>
-
-                    <div class="da-img"></div>
-                </div>
-                <div class="da-slide">
-                    <h2>HTML5/CSS3</h2>
-
-                    <p>HTML5 is a markup language used for structuring and presenting Web.</p>
-
-                    <div class="da-img"></div>
-                </div>
-                <div class="da-slide">
-                    <h2>JavaScript/jQuery</h2>
-
-                    <p>jQuery: Write Less, Do More...</p>
-
-                    <div class="da-img"></div>
-                </div>
-                <!--  <nav class="da-arrows">
+                        <div class="da-img"></div>
+                    </div>
+                @endforeach
+                            <!--  <nav class="da-arrows">
                         <span class="da-arrows-prev"></span>
                         <span class="da-arrows-next"></span>
                     </nav> -->
@@ -114,13 +95,13 @@
 <section id="introText">
     <div class="container">
         <div class="text-center">
-            <h1>I create beautiful responsive websites, Yes I am a UX geek</h1>
+            <h1>A bit of Arduino here....etc and so on</h1>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt
-                volutpat. Cras eget augue id dui varius pretium. Cras posuere dolor risus. Pellentesque elementum
-                ultricies quam, sit amet rhoncus nisl viverra in. Cras imperdiet nisi a euismod molestie. Ut a metus
-                arcu. Pellentesque feugiat dictum erat. Nulla vehicula condimentum purus, quis imperdiet nisl ultricies
-                eleifend. Nulla quis rhoncus risus. Ut vel vehicula urna.</p>
+            <p>Minions ipsum incididunt ad hahaha daa. Exercitation nisi aaaaaah hana dul sae po kass sed ad exercitation labore.
+                Sit amet nisi tempor incididunt cillum qui. Aliqua me want bananaaa! Uuuhhh tank yuuu!
+                Ullamco bappleees nisi ti aamoo! Belloo! Ad la bodaaa.
+                Bee do bee do bee do qui dolor ut qui qui exercitation. Tempor pepete aaaaaah pepete commodo.
+                Reprehenderit qui aute cillum esse. </p>
         </div>
     </div>
 
@@ -130,16 +111,16 @@
     <div class="container">
         <div class="heading text-center">
             <!-- Heading -->
-            <h2>I am Sam, a UI Designer & developer</h2>
+            <h2>{{$site_options['about_me_intro']}}</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p>{{$site_options['about_me_subintro']}}</p>
         </div>
         <div class="row">
             <!-- item -->
             <div class="col-md-4 text-center tileBox">
-                <div class="txtHead"><i class="mdicon man-cycling "></i>
+                <div class="txtHead"><i class="mdicon memory-chip "></i>
 
-                    <h3>Responsive <span class="id-color">Design</span></h3></div>
+                    <h3>Arduino <span class="id-color"></span></h3></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt
                     volutpat. Cras eget augue id dui varius pretium.</p>
             </div>
@@ -147,9 +128,9 @@
 
             <!-- item -->
             <div class="col-md-4 text-center tileBox">
-                <div class="txtHead"><i class="mdicon shining-sun"></i>
+                <div class="txtHead"><i class="mdicon android"></i>
 
-                    <h3>HTML5/CSS3 <span class="id-color">Dev</span></h3></div>
+                    <h3>Robotics</h3></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt
                     volutpat. Cras eget augue id dui varius pretium.</p>
             </div>
@@ -157,9 +138,9 @@
 
             <!-- item -->
             <div class="col-md-4 text-center tileBox">
-                <div class="txtHead"><i class="mdicon fill-mood"></i>
+                <div class="txtHead"><i class="mdicon laptop"></i>
 
-                    <h3>JavaScript <span class="id-color">jQuery</span></h3></div>
+                    <h3>C Dev</h3></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum erat et neque tincidunt
                     volutpat. Cras eget augue id dui varius pretium.</p>
             </div>
@@ -196,7 +177,8 @@
                             <div class="col-md-2 skilltitle">{{$skill['name']}}</div>
                             <div class="col-md-8">
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="{{$skill['percentage']}}" aria-valuemin="0"
+                                    <div class="progress-bar" role="progressbar"
+                                         aria-valuenow="{{$skill['percentage']}}" aria-valuemin="0"
                                          aria-valuemax="100" style="width: {{$skill['percentage']}}%;">
                                         <span class="sr-only">{{$skill['percentage']}}% Complete</span>
                                     </div>
@@ -281,13 +263,20 @@
 
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter name"
+                        <input type="text" class="form-control" required="true" name="name" id="name"
+                               placeholder="Enter name"
                                title="Please enter your name (at least 2 characters)">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter email"
+                        <input type="email" class="form-control" required="true" name="email" id="email"
+                               placeholder="Enter email"
                                title="Please enter a valid email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Quote (USD)</label>
+                        <input type="number" class="form-control" name="quote" min="0" step="50" max="50000" id="quote"
+                               placeholder="estimated cost of project">
                     </div>
                     <div class="form-group">
                         <label for="comments">Comments</label>
@@ -363,7 +352,8 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                Copyright 2015 | All Rights Reserved -- Template by <a href="#">Bix</a>
+                <?php $dt = Carbon::now();?>
+                Copyright {{$dt->toFormattedDateString()}} | All Rights Reserved.
             </div>
         </div>
         <!-- / .row -->

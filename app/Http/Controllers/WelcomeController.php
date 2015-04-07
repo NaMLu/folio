@@ -1,8 +1,9 @@
 <?php namespace App\Http\Controllers;
 use App\Category;
+use App\Option;
 use App\Work;
 use App\Skill;
-
+use App\Slide;
 class WelcomeController extends Controller {
 
 	/*
@@ -36,7 +37,9 @@ class WelcomeController extends Controller {
         $skills_object = Skill::all()->toArray();
         $skills = array_chunk((array)$skills_object,4,true);
 		$categories =  Category::all();
-		return view('welcome', compact('items','categories','skills'));
+        $slides = Slide::all();
+        $site_options = Option::lists('value', 'name');
+		return view('welcome', compact('items','categories','skills','slides','site_options'));
 	}
 
 }
