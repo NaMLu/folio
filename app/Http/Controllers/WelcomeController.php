@@ -39,7 +39,7 @@ class WelcomeController extends Controller {
 		$categories =  Category::all();
         $slides = Slide::all();
         $site_options = Option::lists('value', 'name');
-		return view('welcome', compact('items','categories','skills','slides','site_options'));
+		return view('homepage', compact('items','categories','skills','slides','site_options'));
 	}
 
 }
