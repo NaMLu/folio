@@ -35,7 +35,7 @@ class WelcomeController extends Controller {
 	public function index()
 	{	$items =  Work::with('categories')->orderBy('id','desc')->take(9)->get();
         $skills_object = Skill::all()->toArray();
-        $skills = array_chunk((array)$skills_object,4,true);
+        $skills = array_chunk((array)$skills_object,5,true);
 		$categories =  Category::all();
         $slides = Slide::all();
         $site_options = Option::lists('value', 'name');

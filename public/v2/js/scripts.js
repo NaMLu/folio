@@ -283,13 +283,15 @@
 				type: "POST",
 				url : action,
 				data: {
-					contact_name: contactForm.find('.contact-name').val(),
-					contact_email: contactForm.find('.contact-email').val(),
-					contact_message: contactForm.find('.contact-message').val()
+					name: contactForm.find('.contact-name').val(),
+					email: contactForm.find('.contact-email').val(),
+                    _token: contactForm.find('.token_token').val(),
+                    quote: contactForm.find('.contact-quote').val(),
+					message: contactForm.find('.contact-message').val()
 				},
 				success: function() {
 					contactForm.find('.contact-loading').fadeOut();
-					contactForm.find('.contact-success').find('.message').html('Success! Thanks for contacting us!');
+					contactForm.find('.contact-success').find('.message').html('Success! Thanks for contacting me!');
 					contactForm.find('.contact-success').fadeIn();
 				},
 				error: function() {

@@ -9,6 +9,7 @@ use App\Work;
 use Illuminate\Support\Facades\Input;
 use Response;
 use View;
+use App\Option;
 
 class FolioController extends Controller
 {
@@ -89,7 +90,10 @@ class FolioController extends Controller
      */
     public function show($id)
     {
-        //
+        $item = Work::find($id);
+        $site_options = Option::lists('value', 'name');
+        return view('folio.show', compact('item','site_options'));
+
     }
 
     /**
