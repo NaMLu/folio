@@ -11,9 +11,7 @@
                         <div class="col-sm-7 vertical-center padding-fix">
                             <h1>Design<sup>+</sup> Develope<sup>+</sup> Interactive<sup>+</sup> Art<sup>+</sup></h1>
 
-                            <p>Hello, I’m Benjamin Thomson. I Have 8 years of experience in Web and UX design. I am
-                                worked
-                                on a variety of brands and with agencies both big and small.</p>
+                            <p>{{$site_options['about_me_intro_home']}}</p>
 
                             <p class="button-row"><a href="#" class="button solid-button white">Hire Me Now</a><a
                                         href="#"
@@ -43,16 +41,10 @@
                         </div>
                         <!-- end .col-sm-3 -->
                         <div class="col-sm-9">
-                            <h3 class="small-margin-bottom">Benjamin Thomson</h3>
-                            <h5>Web & UX Designer</h5>
+                            <h3 class="small-margin-bottom">{{$site_options['site_admin']}}</h3>
+                            <h5>{{$site_options['site_admin_title']}}</h5>
 
-                            <p>Ultricies nisi voluptatem, illo inventore veritatis et quasi architecto beatae vitae
-                                dicta
-                                sunt explicabo nemo enim ipsam voluptatem. Sed ut perspiciatis unde omnis iste natus
-                                error
-                                sit voluptatem accusantium doloremque latu dantium, totam rem aperiam, eaque ipsa quae
-                                ab
-                                illo tempor dignissim at. </p>
+                            <p>{{$site_options['about_']}}</p>
 
                             <div class="signature"><img src="/v2/images/signature.png" alt="signature"
                                                         class="img-responsive">
