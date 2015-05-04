@@ -26,6 +26,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('portfolio/create', ['as' => 'create-new-item', 'uses' => 'FolioController@create']);
     Route::post('portfolio', 'FolioController@store');
     Route::post('skills', 'FolioController@storeSkill');
+    Route::get('settings', 'HomeController@settings');
     Route::get('portfolio/{id}/edit', 'FolioController@edit');
     Route::post('portfolio/{id}/update', 'FolioController@update');
     Route::get('messages', ['as' => 'view-all-messages', 'uses' => 'MessagesController@index']);
