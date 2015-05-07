@@ -67,8 +67,10 @@
             <li>
                 <a href="javascript:;">Portfolio</a>
                 <ul class="child-menu">
-                    <li><a href="/portfolio/"><span class="text-center">View all</span><i class="fa fa-list-alt pull-right"></i></a></li>
-                    <li><a href="{{route('create-new-item')}}"><span class="text-center">Add New</span><i class="fa fa-file-o pull-right"></i></a></li>
+                    <li><a href="/portfolio/"><span class="text-center">View all</span><i
+                                    class="fa fa-list-alt pull-right"></i></a></li>
+                    <li><a href="{{route('create-new-item')}}"><span class="text-center">Add New</span><i
+                                    class="fa fa-file-o pull-right"></i></a></li>
                 </ul>
             </li>
 
@@ -76,29 +78,7 @@
                 <a href="{{route('view-all-messages')}}">Messages <i class="fa fa-list-alt pull-right"></i></a>
             </li>
             <li>
-                <a href="javascript:;">Grids</a>
-                <ul class="child-menu">
-                    <li><a href="grids-bootstrap.html">Bootstrap Grids</a></li>
-                    <li><a href="grids-bootstrap-extra.html">Extra Grids</a></li>
-                    <li><a href="grids-masonry.html">Masonry Grids</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;">Charts</a>
-                <ul class="child-menu">
-                    <li><a href="charts-c3.html">C3 Charts</a></li>
-                    <li><a href="charts-chartjs.html">Chart JS</a></li>
-                    <li><a href="charts-flot.html">Flot Charts</a></li>
-                    <li><a href="charts-knob.html">Knob Charts</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;">Maps</a>
-                <ul class="child-menu">
-                    <li><a href="maps-google.html">Google Maps</a></li>
-                    <li><a href="maps-leaflet.html">Leaflet Maps</a></li>
-                    <li><a href="maps-vector.html">Vector Maps</a></li>
-                </ul>
+                <a href="{{ url('/settings')}}">Site Settings <i class="fa fa-list-alt pull-right"></i></a>
             </li>
             <li>
                 <a href="{{ url('/auth/logout') }}">
@@ -125,124 +105,12 @@
         <div class="results">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="result result-users">
-                        <h4>USERS
-                            <small>(3)</small>
-                        </h4>
 
-                        <ul class="list-material">
-                            <li class="has-action-left">
-                                <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                <a href="#" class="visible">
-                                    <div class="list-action-left">
-                                        <img src="../../assets/globals/img/faces/1.jpg" class="face-radius" alt="">
-                                    </div>
-                                    <div class="list-content">
-                                        <span class="title">Pari Subramanium</span>
-                                        <span class="caption">Legacy Response Assistant</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="has-action-left">
-                                <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                <a href="#" class="visible">
-                                    <div class="list-action-left">
-                                        <img src="../../assets/globals/img/faces/10.jpg" class="face-radius" alt="">
-                                    </div>
-                                    <div class="list-content">
-                                        <span class="title">Andrew Fox</span>
-                                        <span class="caption">National Branding Technician</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="has-action-left">
-                                <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                <a href="#" class="visible">
-                                    <div class="list-action-left">
-                                        <img src="../../assets/globals/img/faces/11.jpg" class="face-radius" alt="">
-                                    </div>
-                                    <div class="list-content">
-                                        <span class="title">Lieke Vermeulen</span>
-                                        <span class="caption">Global Tactics Consultant</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
                     <!--.results-user-->
                 </div>
                 <!--.col-->
                 <div class="col-md-4">
-                    <div class="result result-posts">
-                        <h4>POSTS
-                            <small>(5)</small>
-                        </h4>
 
-                        <ul class="list-material">
-                            <li class="has-action-left">
-                                <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                <a href="#" class="visible">
-                                    <div class="list-action-left">
-                                        <img src="../../assets/globals/img/picjumbo/1.jpg" class="img-radius" alt="">
-                                    </div>
-                                    <div class="list-content">
-                                        <span class="title">Mobile Trends for 2015</span>
-                                        <span class="caption">Collaboratively administrate empowered markets via plug-and-play networks.</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="has-action-left">
-                                <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                <a href="#" class="visible">
-                                    <div class="list-action-left">
-                                        <img src="../../assets/globals/img/picjumbo/10.jpg" class="img-radius" alt="">
-                                    </div>
-                                    <div class="list-content">
-                                        <span class="title">Interview with Phillip Riley</span>
-                                        <span class="caption">Dynamically procrastinate B2C users after installed base benefits.</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="has-action-left">
-                                <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                <a href="#" class="visible">
-                                    <div class="list-action-left">
-                                        <img src="../../assets/globals/img/picjumbo/11.jpg" class="img-radius" alt="">
-                                    </div>
-                                    <div class="list-content">
-                                        <span class="title">Workspaces</span>
-                                        <span class="caption">Dramatically visualize customer directed convergence without revolutionary ROI.</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="has-action-left">
-                                <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                <a href="#" class="visible">
-                                    <div class="list-action-left">
-                                        <img src="../../assets/globals/img/picjumbo/5.jpg" class="img-radius" alt="">
-                                    </div>
-                                    <div class="list-content">
-                                        <span class="title">Graphics &amp; Multimedia</span>
-                                        <span class="caption">Efficiently unleash cross-media information without cross-media value.</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="has-action-left">
-                                <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                <a href="#" class="visible">
-                                    <div class="list-action-left">
-                                        <img src="../../assets/globals/img/picjumbo/6.jpg" class="img-radius" alt="">
-                                    </div>
-                                    <div class="list-content">
-                                        <span class="title">Interactive Storytelling</span>
-                                        <span class="caption">Quickly maximize timely deliverables for real-time schemas.</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
                     <!--.results-posts-->
                 </div>
                 <!--.col-->
@@ -279,120 +147,13 @@
                 <div class="col-md-4">
                     <div class="message-list-overlay"></div>
 
-                    <ul class="list-material message-list">
-                        <li class="has-action-left has-action-right">
-                            <a href="#" class="visible" data-message-id="1">
-                                <div class="list-action-left">
-                                    <img src="../../assets/globals/img/faces/1.jpg" class="face-radius" alt="">
-                                </div>
-                                <div class="list-content">
-                                    <span class="title">Pari Subramanium</span>
-                                    <span class="caption">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.</span>
-                                </div>
-                                <div class="list-action-right">
-                                    <span class="top">15 min</span>
-                                    <i class="ion-android-done bottom"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="has-action-left has-action-right">
-                            <a href="#" class="visible" data-message-id="2">
-                                <div class="list-action-left">
-                                    <img src="../../assets/globals/img/faces/10.jpg" class="face-radius" alt="">
-                                </div>
-                                <div class="list-content">
-                                    <span class="title">Andrew Fox</span>
-                                    <span class="caption">Dramatically visualize customer directed convergence without revolutionary ROI. Efficiently unleash cross-media information without cross-media value.</span>
-                                </div>
-                                <div class="list-action-right">
-                                    <span class="top">2 hr</span>
-                                    <i class="ion-android-done bottom"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="has-action-left has-action-right">
-                            <a href="#" class="visible" data-message-id="4">
-                                <div class="list-action-left">
-                                    <img src="../../assets/globals/img/faces/2.jpg" class="face-radius" alt="">
-                                </div>
-                                <div class="list-content">
-                                    <span class="title">Benjamin Beck</span>
-                                    <span class="caption">Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.</span>
-                                </div>
-                                <div class="list-action-right">
-                                    <span class="top">1 week ago</span>
-                                    <i class="ion-android-done bottom"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="has-action-left has-action-right">
-                            <a href="#" class="visible" data-message-id="5">
-                                <div class="list-action-left">
-                                    <img src="../../assets/globals/img/faces/12.jpg" class="face-radius" alt="">
-                                </div>
-                                <div class="list-content">
-                                    <span class="title">Joshua Harris</span>
-                                    <span class="caption">Dynamically innovate resource-leveling customer service for state of the art customer service. Objectively innovate empowered manufactured products whereas parallel platforms.</span>
-                                </div>
-                                <div class="list-action-right">
-                                    <span class="top">Jan 10, 2015</span>
-                                    <i class="ion-android-done bottom"></i>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+
                 </div>
                 <!--.col-->
                 <div class="col-md-8">
                     <div class="message-send-container">
 
-                        <div class="messages">
-                            <div class="message left">
-                                <div class="message-text">Hello!</div>
-                                <img src="../../assets/globals/img/faces/1.jpg" class="user-picture" alt="">
-                            </div>
-                            <div class="message right">
-                                <div class="message-text">Hi!</div>
-                                <div class="message-text">Credibly innovate granular internal or "organic" sources
-                                    whereas high standards in web-readiness. Energistically scale future-proof core
-                                    competencies vis-a-vis impactful experiences.
-                                </div>
-                                <img src="../../assets/globals/img/faces/tolga-ergin.jpg" class="user-picture" alt="">
-                            </div>
-                            <div class="message left">
-                                <div class="message-text">Dramatically synthesize integrated schemas with optimal
-                                    networks.
-                                </div>
-                                <img src="../../assets/globals/img/faces/1.jpg" class="user-picture" alt="">
-                            </div>
-                            <div class="message right">
-                                <div class="message-text">Interactively procrastinate high-payoff content</div>
-                                <img src="../../assets/globals/img/faces/tolga-ergin.jpg" class="user-picture" alt="">
-                            </div>
-                            <div class="message left">
-                                <div class="message-text">Globally incubate standards compliant channels before scalable
-                                    benefits. Quickly disseminate superior deliverables whereas web-enabled
-                                    applications. Quickly drive clicks-and-mortar catalysts for change before vertical
-                                    architectures.
-                                </div>
-                                <div class="message-text">Credibly reintermediate backend ideas for cross-platform
-                                    models. Continually reintermediate integrated processes through technically sound
-                                    intellectual capital. Holistically foster superior methodologies without
-                                    market-driven best practices.
-                                </div>
-                                <img src="../../assets/globals/img/faces/1.jpg" class="user-picture" alt="">
-                            </div>
-                            <div class="message right">
-                                <div class="message-text">Distinctively exploit optimal alignments for intuitive
-                                    bandwidth
-                                </div>
-                                <img src="../../assets/globals/img/faces/tolga-ergin.jpg" class="user-picture" alt="">
-                            </div>
-                            <div class="message left">
-                                <div class="message-text">Quickly coordinate e-business applications through</div>
-                                <img src="../../assets/globals/img/faces/1.jpg" class="user-picture" alt="">
-                            </div>
-                        </div>
+
                         <!--.messages-->
 
                         <div class="send-message">
