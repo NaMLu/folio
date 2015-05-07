@@ -52,39 +52,54 @@
                             <ul class="list-unstyled text-uppercase">
                                 <li><b>Date Of Birth:</b> 24 Jan 1989</li>
                                 <li><b>Phone:</b> 012-345-6789</li>
-                                <li><b>Email:</b> Sility@example.com</li>
-                                <li><b>Address:</b> 123 Sility, South Corner Street, Melborne, Australia.</li>
-                                <li><b>Website:</b> http://www.example.com</li>
+                                <li><b>Email:</b> {{$site_options['admin_email']}}</li>
+                                <li><b>Address:</b> Nairobi, Kenya.</li>
+                                <li><b>Website:</b> {{$site_options['site_address']}}</li>
                             </ul>
                             <!-- end .list-unstyled -->
                             <div class="spacer"></div>
-                            <h3>What I'm Doing</h3>
-
+                            <h3>Interests and Hobbies</h3>
                             <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="service">
-                                        <div class="icon"><i class="ion-monitor"></i></div>
-                                        <h5>Web & UX Design</h5>
+                                <div class="col-sm-2 col-sm-offset-1 col-xs-6">
+                                    <div class="icon-box">
+                                        <div class="icon"><i class="ion-ios-film"></i></div>
+                                        <h6>Movies</h6>
                                     </div>
-                                    <!-- end .service -->
+                                    <!-- end .icon-box -->
                                 </div>
-                                <!-- end .col-sm-4 -->
-                                <div class="col-sm-4">
-                                    <div class="service">
-                                        <div class="icon"><i class="ion-iphone"></i></div>
-                                        <h5>App Development</h5>
+                                <!-- end .col-sm-2 -->
+                                <div class="col-sm-2 col-xs-6">
+                                    <div class="icon-box">
+                                        <div class="icon"><i class="ion-ios-camera-outline"></i></div>
+                                        <h6>Photography</h6>
                                     </div>
-                                    <!-- end .service -->
+                                    <!-- end .icon-box -->
                                 </div>
-                                <!-- end .col-sm-4 -->
-                                <div class="col-sm-4">
-                                    <div class="service">
-                                        <div class="icon"><i class="ion-trophy"></i></div>
-                                        <h5>Marketing</h5>
+                                <!-- end .col-sm-2 -->
+                                <div class="col-sm-2 col-xs-6">
+                                    <div class="icon-box">
+                                        <div class="icon"><i class="ion-plane"></i></div>
+                                        <h6>Travelling</h6>
                                     </div>
-                                    <!-- end .service -->
+                                    <!-- end .icon-box -->
                                 </div>
-                                <!-- end .col-sm-4 -->
+                                <!-- end .col-sm-2 -->
+                                <div class="col-sm-2 col-xs-6">
+                                    <div class="icon-box">
+                                        <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
+                                        <h6>Reading</h6>
+                                    </div>
+                                    <!-- end .icon-box -->
+                                </div>
+                                <!-- end .col-sm-2 -->
+                                <div class="col-sm-2 col-xs-6">
+                                    <div class="icon-box">
+                                        <div class="icon"><i class="ion-ios-musical-notes"></i></div>
+                                        <h6>Music</h6>
+                                    </div>
+                                    <!-- end .icon-box -->
+                                </div>
+                                <!-- end .col-sm-2 -->
                             </div>
                             <!-- end .row -->
                         </div>
@@ -335,50 +350,8 @@
                     </div>
                     <!-- end .education -->
 
-                    <h2>Hobbies & Interest</h2>
 
-                    <div class="row">
-                        <div class="col-sm-2 col-sm-offset-1 col-xs-6">
-                            <div class="icon-box">
-                                <div class="icon"><i class="ion-easel"></i></div>
-                                <h6>Web Research</h6>
-                            </div>
-                            <!-- end .icon-box -->
-                        </div>
-                        <!-- end .col-sm-2 -->
-                        <div class="col-sm-2 col-xs-6">
-                            <div class="icon-box">
-                                <div class="icon"><i class="ion-ios-camera-outline"></i></div>
-                                <h6>Photography</h6>
-                            </div>
-                            <!-- end .icon-box -->
-                        </div>
-                        <!-- end .col-sm-2 -->
-                        <div class="col-sm-2 col-xs-6">
-                            <div class="icon-box">
-                                <div class="icon"><i class="ion-plane"></i></div>
-                                <h6>Travelling</h6>
-                            </div>
-                            <!-- end .icon-box -->
-                        </div>
-                        <!-- end .col-sm-2 -->
-                        <div class="col-sm-2 col-xs-6">
-                            <div class="icon-box">
-                                <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
-                                <h6>Book Reading</h6>
-                            </div>
-                            <!-- end .icon-box -->
-                        </div>
-                        <!-- end .col-sm-2 -->
-                        <div class="col-sm-2 col-xs-6">
-                            <div class="icon-box">
-                                <div class="icon"><i class="ion-ios-musical-notes"></i></div>
-                                <h6>Music</h6>
-                            </div>
-                            <!-- end .icon-box -->
-                        </div>
-                        <!-- end .col-sm-2 -->
-                    </div>
+
                     <!-- end .row -->
                 </div>
                 <!-- end .container -->
@@ -537,166 +510,166 @@
             <!-- end #section1 -->
 
             <!-- Blog -->
-            <section id="section7">
-                <div class="container">
-                    <h2>Blog Post</h2>
+            {{--<section id="section7">--}}
+                {{--<div class="container">--}}
+                    {{--<h2>Blog Post</h2>--}}
 
-                    <div class="blog-posts masonry" id="blog-masonry">
-                        <div class="blog-grid-sizer"></div>
-                        <div class="blog-post image-left">
-                            <div class="inner">
-                                <a href="single-blog-post.html">
-                                    <div class="image"
-                                         style="background-image: url('images/blog-post-image01.jpg');"></div>
-                                </a>
+                    {{--<div class="blog-posts masonry" id="blog-masonry">--}}
+                        {{--<div class="blog-grid-sizer"></div>--}}
+                        {{--<div class="blog-post image-left">--}}
+                            {{--<div class="inner">--}}
+                                {{--<a href="single-blog-post.html">--}}
+                                    {{--<div class="image"--}}
+                                         {{--style="background-image: url('images/blog-post-image01.jpg');"></div>--}}
+                                {{--</a>--}}
 
-                                <div class="content">
-                                    <span class="date">March 14, 2015</span>
-                                    <h4><a href="single-blog-post.html">We Support Any Type Of Design</a></h4>
-                                    <footer>
-                                        <span class="comments-link"><a href="single-blog-post.html">3
-                                                Comments</a></span>
-                                    <span class="share-link"><a href="single-blog-post.html"><i
-                                                    class="fa fa-share-alt"></i></a></span>
-                                    </footer>
-                                </div>
-                                <!-- end .content -->
-                            </div>
-                            <!-- end .inner -->
-                        </div>
-                        <!-- end .blog-post -->
-                        <div class="blog-post">
-                            <div class="inner">
-                                <div class="content">
-                                    <span class="date">March 15, 2015</span>
-                                    <h4><a href="single-blog-post.html">We Give 99% Satisfy In All Work</a></h4>
-                                    <footer>
-                                        <span class="comments-link"><a href="single-blog-post.html">7
-                                                Comments</a></span>
-                                    <span class="share-link"><a href="single-blog-post.html"><i
-                                                    class="fa fa-share-alt"></i></a></span>
-                                    </footer>
-                                </div>
-                                <!-- end .content -->
-                            </div>
-                            <!-- end .inner -->
-                        </div>
-                        <!-- end .blog-post -->
-                        <div class="blog-post image-top">
-                            <div class="inner">
-                                <a href="single-blog-post.html">
-                                    <div class="image"
-                                         style="background-image: url('images/blog-post-image02.jpg');"></div>
-                                </a>
+                                {{--<div class="content">--}}
+                                    {{--<span class="date">March 14, 2015</span>--}}
+                                    {{--<h4><a href="single-blog-post.html">We Support Any Type Of Design</a></h4>--}}
+                                    {{--<footer>--}}
+                                        {{--<span class="comments-link"><a href="single-blog-post.html">3--}}
+                                                {{--Comments</a></span>--}}
+                                    {{--<span class="share-link"><a href="single-blog-post.html"><i--}}
+                                                    {{--class="fa fa-share-alt"></i></a></span>--}}
+                                    {{--</footer>--}}
+                                {{--</div>--}}
+                                {{--<!-- end .content -->--}}
+                            {{--</div>--}}
+                            {{--<!-- end .inner -->--}}
+                        {{--</div>--}}
+                        {{--<!-- end .blog-post -->--}}
+                        {{--<div class="blog-post">--}}
+                            {{--<div class="inner">--}}
+                                {{--<div class="content">--}}
+                                    {{--<span class="date">March 15, 2015</span>--}}
+                                    {{--<h4><a href="single-blog-post.html">We Give 99% Satisfy In All Work</a></h4>--}}
+                                    {{--<footer>--}}
+                                        {{--<span class="comments-link"><a href="single-blog-post.html">7--}}
+                                                {{--Comments</a></span>--}}
+                                    {{--<span class="share-link"><a href="single-blog-post.html"><i--}}
+                                                    {{--class="fa fa-share-alt"></i></a></span>--}}
+                                    {{--</footer>--}}
+                                {{--</div>--}}
+                                {{--<!-- end .content -->--}}
+                            {{--</div>--}}
+                            {{--<!-- end .inner -->--}}
+                        {{--</div>--}}
+                        {{--<!-- end .blog-post -->--}}
+                        {{--<div class="blog-post image-top">--}}
+                            {{--<div class="inner">--}}
+                                {{--<a href="single-blog-post.html">--}}
+                                    {{--<div class="image"--}}
+                                         {{--style="background-image: url('images/blog-post-image02.jpg');"></div>--}}
+                                {{--</a>--}}
 
-                                <div class="content">
-                                    <span class="date">March 13, 2015</span>
-                                    <h4><a href="single-blog-post.html">We Won CSS Design Of The Year</a></h4>
-                                    <footer>
-                                        <span class="comments-link"><a href="single-blog-post.html">4
-                                                Comments</a></span>
-                                    <span class="share-link"><a href="single-blog-post.html"><i
-                                                    class="fa fa-share-alt"></i></a></span>
-                                    </footer>
-                                </div>
-                                <!-- end .content -->
-                            </div>
-                            <!-- end .inner -->
-                        </div>
-                        <!-- end .blog-post -->
-                        <div class="blog-post image-top">
-                            <div class="inner">
-                                <a href="single-blog-post.html">
-                                    <div class="image"
-                                         style="background-image: url('images/blog-post-image03.jpg');"></div>
-                                </a>
+                                {{--<div class="content">--}}
+                                    {{--<span class="date">March 13, 2015</span>--}}
+                                    {{--<h4><a href="single-blog-post.html">We Won CSS Design Of The Year</a></h4>--}}
+                                    {{--<footer>--}}
+                                        {{--<span class="comments-link"><a href="single-blog-post.html">4--}}
+                                                {{--Comments</a></span>--}}
+                                    {{--<span class="share-link"><a href="single-blog-post.html"><i--}}
+                                                    {{--class="fa fa-share-alt"></i></a></span>--}}
+                                    {{--</footer>--}}
+                                {{--</div>--}}
+                                {{--<!-- end .content -->--}}
+                            {{--</div>--}}
+                            {{--<!-- end .inner -->--}}
+                        {{--</div>--}}
+                        {{--<!-- end .blog-post -->--}}
+                        {{--<div class="blog-post image-top">--}}
+                            {{--<div class="inner">--}}
+                                {{--<a href="single-blog-post.html">--}}
+                                    {{--<div class="image"--}}
+                                         {{--style="background-image: url('images/blog-post-image03.jpg');"></div>--}}
+                                {{--</a>--}}
 
-                                <div class="content">
-                                    <span class="date">March 12, 2015</span>
-                                    <h4><a href="single-blog-post.html">How to Launch Website Easily</a></h4>
-                                    <footer>
-                                        <span class="comments-link"><a href="single-blog-post.html">10
-                                                Comments</a></span>
-                                    <span class="share-link"><a href="single-blog-post.html"><i
-                                                    class="fa fa-share-alt"></i></a></span>
-                                    </footer>
-                                </div>
-                                <!-- end .content -->
-                            </div>
-                            <!-- end .inner -->
-                        </div>
-                        <!-- end .blog-post -->
-                        <div class="blog-post image-right">
-                            <div class="inner">
-                                <a href="single-blog-post.html">
-                                    <div class="image"
-                                         style="background-image: url('images/blog-post-image04.jpg');"></div>
-                                </a>
+                                {{--<div class="content">--}}
+                                    {{--<span class="date">March 12, 2015</span>--}}
+                                    {{--<h4><a href="single-blog-post.html">How to Launch Website Easily</a></h4>--}}
+                                    {{--<footer>--}}
+                                        {{--<span class="comments-link"><a href="single-blog-post.html">10--}}
+                                                {{--Comments</a></span>--}}
+                                    {{--<span class="share-link"><a href="single-blog-post.html"><i--}}
+                                                    {{--class="fa fa-share-alt"></i></a></span>--}}
+                                    {{--</footer>--}}
+                                {{--</div>--}}
+                                {{--<!-- end .content -->--}}
+                            {{--</div>--}}
+                            {{--<!-- end .inner -->--}}
+                        {{--</div>--}}
+                        {{--<!-- end .blog-post -->--}}
+                        {{--<div class="blog-post image-right">--}}
+                            {{--<div class="inner">--}}
+                                {{--<a href="single-blog-post.html">--}}
+                                    {{--<div class="image"--}}
+                                         {{--style="background-image: url('images/blog-post-image04.jpg');"></div>--}}
+                                {{--</a>--}}
 
-                                <div class="content">
-                                    <span class="date">March 11, 2015</span>
-                                    <h4><a href="single-blog-post.html">Music Is Help To Relax Body And Mind</a></h4>
-                                    <footer>
-                                        <span class="comments-link"><a href="single-blog-post.html">5
-                                                Comments</a></span>
-                                    <span class="share-link"><a href="single-blog-post.html"><i
-                                                    class="fa fa-share-alt"></i></a></span>
-                                    </footer>
-                                </div>
-                                <!-- end .content -->
-                            </div>
-                            <!-- end .inner -->
-                        </div>
-                        <!-- end .blog-post -->
-                        <div class="blog-post">
-                            <div class="inner">
-                                <div class="content">
-                                    <span class="date">March 10, 2015</span>
-                                    <h4><a href="single-blog-post.html">We Support any Type of Design</a></h4>
-                                    <footer>
-                                        <span class="comments-link"><a href="single-blog-post.html">3
-                                                Comments</a></span>
-                                    <span class="share-link"><a href="single-blog-post.html"><i
-                                                    class="fa fa-share-alt"></i></a></span>
-                                    </footer>
-                                </div>
-                                <!-- end .content -->
-                            </div>
-                            <!-- end .inner -->
-                        </div>
-                        <!-- end .blog-post -->
-                        <div class="blog-post image-left">
-                            <div class="inner">
-                                <a href="single-blog-post.html">
-                                    <div class="image"
-                                         style="background-image: url('images/blog-post-image05.jpg');"></div>
-                                </a>
+                                {{--<div class="content">--}}
+                                    {{--<span class="date">March 11, 2015</span>--}}
+                                    {{--<h4><a href="single-blog-post.html">Music Is Help To Relax Body And Mind</a></h4>--}}
+                                    {{--<footer>--}}
+                                        {{--<span class="comments-link"><a href="single-blog-post.html">5--}}
+                                                {{--Comments</a></span>--}}
+                                    {{--<span class="share-link"><a href="single-blog-post.html"><i--}}
+                                                    {{--class="fa fa-share-alt"></i></a></span>--}}
+                                    {{--</footer>--}}
+                                {{--</div>--}}
+                                {{--<!-- end .content -->--}}
+                            {{--</div>--}}
+                            {{--<!-- end .inner -->--}}
+                        {{--</div>--}}
+                        {{--<!-- end .blog-post -->--}}
+                        {{--<div class="blog-post">--}}
+                            {{--<div class="inner">--}}
+                                {{--<div class="content">--}}
+                                    {{--<span class="date">March 10, 2015</span>--}}
+                                    {{--<h4><a href="single-blog-post.html">We Support any Type of Design</a></h4>--}}
+                                    {{--<footer>--}}
+                                        {{--<span class="comments-link"><a href="single-blog-post.html">3--}}
+                                                {{--Comments</a></span>--}}
+                                    {{--<span class="share-link"><a href="single-blog-post.html"><i--}}
+                                                    {{--class="fa fa-share-alt"></i></a></span>--}}
+                                    {{--</footer>--}}
+                                {{--</div>--}}
+                                {{--<!-- end .content -->--}}
+                            {{--</div>--}}
+                            {{--<!-- end .inner -->--}}
+                        {{--</div>--}}
+                        {{--<!-- end .blog-post -->--}}
+                        {{--<div class="blog-post image-left">--}}
+                            {{--<div class="inner">--}}
+                                {{--<a href="single-blog-post.html">--}}
+                                    {{--<div class="image"--}}
+                                         {{--style="background-image: url('images/blog-post-image05.jpg');"></div>--}}
+                                {{--</a>--}}
 
-                                <div class="content">
-                                    <span class="date">March 9, 2015</span>
-                                    <h4><a href="single-blog-post.html">Change Your Domain Without Risk</a></h4>
-                                    <footer>
-                                        <span class="comments-link"><a href="single-blog-post.html">6
-                                                Comments</a></span>
-                                    <span class="share-link"><a href="single-blog-post.html"><i
-                                                    class="fa fa-share-alt"></i></a></span>
-                                    </footer>
-                                </div>
-                                <!-- end .content -->
-                            </div>
-                            <!-- end .inner -->
-                        </div>
-                        <!-- end .blog-post -->
-                    </div>
-                    <!-- end .blog-posts -->
-                    <div class="blog-load-more">
-                        <a href="single-blog-post.html" class="button solid-button white icon-right">Load More Posts<i
-                                    class="md-refresh"></i></a>
-                    </div>
-                    <!-- end .blog-load-more -->
-                </div>
-                <!-- end .container -->
-            </section>
+                                {{--<div class="content">--}}
+                                    {{--<span class="date">March 9, 2015</span>--}}
+                                    {{--<h4><a href="single-blog-post.html">Change Your Domain Without Risk</a></h4>--}}
+                                    {{--<footer>--}}
+                                        {{--<span class="comments-link"><a href="single-blog-post.html">6--}}
+                                                {{--Comments</a></span>--}}
+                                    {{--<span class="share-link"><a href="single-blog-post.html"><i--}}
+                                                    {{--class="fa fa-share-alt"></i></a></span>--}}
+                                    {{--</footer>--}}
+                                {{--</div>--}}
+                                {{--<!-- end .content -->--}}
+                            {{--</div>--}}
+                            {{--<!-- end .inner -->--}}
+                        {{--</div>--}}
+                        {{--<!-- end .blog-post -->--}}
+                    {{--</div>--}}
+                    {{--<!-- end .blog-posts -->--}}
+                    {{--<div class="blog-load-more">--}}
+                        {{--<a href="single-blog-post.html" class="button solid-button white icon-right">Load More Posts<i--}}
+                                    {{--class="md-refresh"></i></a>--}}
+                    {{--</div>--}}
+                    {{--<!-- end .blog-load-more -->--}}
+                {{--</div>--}}
+                {{--<!-- end .container -->--}}
+            {{--</section>--}}
             <!-- end #section1 -->
 
             <!-- Contact -->
@@ -708,21 +681,19 @@
                         <div class="col-sm-5">
                             <h5>Contact Address</h5>
                             <ul class="list-icons list-unstyled">
-                                <li><i class="ion-ios-location-outline"></i>123 Sility, South Corner Street,<br/>Melbornem
-                                    Australia.
+                                <li><i class="ion-ios-location-outline"></i>123 Nairobi,<br/>Naiorbi,
+                                    Kenya.
                                 </li>
-                                <li><i class="ion-iphone"></i>Phone: +61 012 345 6789</li>
+                                <li><i class="ion-iphone"></i>Phone: {{$site_options['mobile_number']}}</li>
                                 <li><i class="ion-ios-email-outline"></i>Email: <a
-                                            href="mailto:example@gmail.com">example@gmail.com</a></li>
-                                <li><i class="ion-ios-home-outline"></i>Website: <a href="#">info@sility.com</a></li>
+                                            href="mailto:{{$site_options['admin_email']}}">{{$site_options['admin_email']}}</a></li>
+                                <li><i class="ion-ios-home-outline"></i>Website: <a href="#">{{$site_options['site_address']}}</a></li>
                             </ul>
                             <div class="spacer"></div>
                             <div class="social-icons">
-                                <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="social-icon"><i class="fa fa-google-plus"></i></a>
-                                <a href="#" class="social-icon"><i class="fa fa-behance"></i></a>
-                                <a href="#" class="social-icon"><i class="fa fa-dribbble"></i></a>
+                                <a href="{{$site_options['facebook_link']}}" target="_blank" class="social-icon"><i class="fa fa-facebook"></i></a>
+                                <a href="{{$site_options['twitter_handle']}}" target="_blank" class="social-icon"><i class="fa fa-twitter"></i></a>
+                                <a href="{{$site_options['google_plus_page']}}" target="_blank" class="social-icon"><i class="fa fa-google-plus"></i></a>
                             </div>
                             <!-- end .social-icons -->
                             <div class="spacer"></div>

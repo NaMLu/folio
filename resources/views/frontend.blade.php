@@ -225,7 +225,7 @@
                 <li><a href="#section4">Experience</a></li>
                 <li><a href="#section5">Education</a></li>
                 <li><a href="#section6">Work</a></li>
-                <li><a href="#section7">Blog</a></li>
+                {{--<li><a href="#section7">Blog</a></li>--}}
                 <li><a href="#section8">Contact</a></li>
             </ul>
         </nav>
@@ -269,11 +269,9 @@
                     <h4>Connect</h4>
 
                     <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fa fa-google-plus"></i></a>
-                        <a href="#" class="social-icon"><i class="fa fa-behance"></i></a>
-                        <a href="#" class="social-icon"><i class="fa fa-dribbble"></i></a>
+                        <a href="{{$site_options['facebook_link']}}" target="_blank" class="social-icon"><i class="fa fa-facebook"></i></a>
+                        <a href="{{$site_options['twitter_handle']}}" target="_blank" class="social-icon"><i class="fa fa-twitter"></i></a>
+                        <a href="{{$site_options['google_plus_page']}}" target="_blank" class="social-icon"><i class="fa fa-google-plus"></i></a>
                     </div>
                     <!-- end .social-icons -->
                 </div>
@@ -281,7 +279,7 @@
                 <div class="col-sm-4">
                     <h4>Contact</h4>
 
-                    <p>Tel: +61 123-456-7890<br/>Mail: Sility@example.com</p>
+                    <p>Tel: {{$site_options['mobile_number']}}<br/>Mail: <a href="mailto:{{$site_options['admin_email']}}" target="_top">{{$site_options['admin_email']}}</a></p>
                 </div>
                 <!-- end .col-sm-4 -->
             </div>
