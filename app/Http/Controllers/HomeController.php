@@ -1,7 +1,9 @@
 <?php namespace App\Http\Controllers;
 
 use App\Skill;
+use App\Setting;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
@@ -47,7 +49,20 @@ class HomeController extends Controller
             $setting->name_string = str_replace("_", " ", $setting->name);
             $options[] = $setting;
         }
+
         return view('settings', compact('settings'));
+    }
+
+    public function save_settings()
+    {
+        $data = Input::except( '_token');
+        foreach ($data as $key => $value) {
+            $setting =Setting::find($key);
+            $setting->value = $value;
+            $setting->save();
+        }
+
+        return redirect('settings')->with('message', 'Update Successful');;
     }
 
 }

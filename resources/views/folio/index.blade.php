@@ -17,9 +17,27 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            @foreach($skills as $skill)
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="{{$skill->percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$skill->percentage}}%;">{{$skill->name}}</div>
+            @foreach($items as $item)
+                <div class="col-md-4">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div class="panel-title"><h4>{{$item->name}}</h4></div>
+                        </div><!--.panel-heading-->
+                        <div class="panel-body without-padding">
+                            <div class="list-gallery">
+                                <div class="card tile card-black card-image bg-image sample-bg-image8 margin-0">
+                                </div><!--.card-->
+                            </div><!--.row-->
+                        </div><!--.panel-body-->
+                        <div class="panel-footer footer-dark footer-translucent">
+                            <ul class="justified-list">
+                                <li><i class="ion-android-favorite-outline"></i></li>
+                                <li><i class="ion-android-radio-button-off"></i></li>
+                                <li><i class="ion-android-checkbox-outline-blank"></i></li>
+                            </ul>
+                            
+                        </div><!--.panel-footer-->
+                    </div><!--.panel-->
                 </div>
             @endforeach
         </div>
