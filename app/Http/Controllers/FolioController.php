@@ -145,4 +145,13 @@ class FolioController extends Controller
         ];
         return response()->json($data);
     }
+    public function deleteSkill($id)
+    {
+        $skill = Skill::find($id);
+        $skill->delete();
+        $data = [
+            'success' => TRUE,
+        ];
+        return redirect()->back()->with('message', 'skill deleted');
+    }
 }

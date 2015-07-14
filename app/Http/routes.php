@@ -15,8 +15,6 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 Route::post('messages', 'MessagesController@store');
-Route::get('portfolio/{id}', 'FolioController@show');
-
 Route::controllers([
     'auth'     => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
@@ -26,6 +24,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('portfolio/create', ['as' => 'create-new-item', 'uses' => 'FolioController@create']);
     Route::post('portfolio', 'FolioController@store');
     Route::post('skills', 'FolioController@storeSkill');
+    Route::get('skills/{id}/delete', 'FolioController@deleteSkill');
     Route::get('settings', 'HomeController@settings');
     Route::post('settings', 'HomeController@save_settings');
     Route::get('portfolio/{id}/edit', 'FolioController@edit');
@@ -33,3 +32,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('messages', ['as' => 'view-all-messages', 'uses' => 'MessagesController@index']);
     Route::get('messages/{id}', 'MessagesController@show');
 });
+Route::get('portfolio/{id}', 'FolioController@show');

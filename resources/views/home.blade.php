@@ -19,11 +19,11 @@
             <div class="col-md-4">
                 <div class="panel blue">
                     <div class="panel-heading">
-                        <div class="panel-title"><h4>PINK</h4></div>
+                        <div class="panel-title"><h4>Some Data Here</h4></div>
                     </div>
                     <!--.panel-heading-->
                     <div class="panel-body">
-                        <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
+                        <p>This is a placeholder.</p>
                     </div>
                     <!--.panel-body-->
                 </div>
@@ -37,12 +37,21 @@
                     </div>
                     <!--.panel-heading-->
                     <div class="panel-body">
-                        @foreach($skills as $skill)
+                        @foreach($skills as $skill) <div class="row">
+                            <div class="col-md-10">
                             <div class="progress progress-striped active">
                                 <div class="progress-bar progress-bar-info" role="progressbar"
                                      aria-valuenow="{{$skill->percentage}}" aria-valuemin="0" aria-valuemax="100"
                                      style="width: {{$skill->percentage}}%;">{{$skill->name}}</div>
+
                             </div>
+                                
+                            </div>
+                            <div class="col-md-2">
+                                <a class="btn btn-sm btn-primary" href="/skills/{{$skill->id}}/delete"> delete</a>
+                            </div>
+                        </div>
+                    
                         @endforeach
                     </div>
                     <!--.panel-body-->
@@ -110,11 +119,13 @@
     <script>
         $("#addskill").submit(function (event) {
             event.preventDefault();
+            $('#createSkillModal').modal('hide');
             var inputs = $("#addskill").serializeArray();
             $.post("/skills",
                     inputs,
                     function (data) {
                         console.log(data);
+                        $.growl.notice({ title: "Successful!!", message: "The Skill was Saved!" });
                     });
         });
     </script>

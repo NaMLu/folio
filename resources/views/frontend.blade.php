@@ -262,7 +262,7 @@
                 <div class="col-sm-4">
                     <h4>Address</h4>
 
-                    <p>123 Sility, South Corner Street,<br/>Melbornem Australia.</p>
+                    <p>{{ $site_options['user_address'] or '124 Nairobi' }}<br/>{{ $site_options['address_city_country'] or 'Nairobi, Kenya' }}</p>
                 </div>
                 <!-- end .col-sm-4 -->
                 <div class="col-sm-4">
