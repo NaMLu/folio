@@ -22,8 +22,7 @@
 
         <div class="nav-user">
             <div class="user">
-                <img src="/backend/assets/globals/img/faces/tolga-ergin.jpg" alt="">
-                <span class="badge">3</span>
+                <i class="fa fa-user fa-fw"></i>
             </div>
             <!--.user-->
             <div class="cross">
