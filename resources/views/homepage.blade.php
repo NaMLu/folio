@@ -366,141 +366,39 @@
                     <div class="portfolio-wrapper">
                         <div id="portfolio-filters" class="portfolio-filters">
                             <button class="button solid-button white-purple small" data-filter="*">Show All</button>
-                            <button class="button solid-button white-purple small" data-filter=".branding">Branding
+                            @foreach($categories as $category)
+                            <button class="button solid-button white-purple small" data-filter=".{{ $category->name }}">
+                            {{ $category->name }}
                             </button>
-                            <button class="button solid-button white-purple small" data-filter=".print">Print</button>
-                            <button class="button solid-button white-purple small" data-filter=".motion">Motion</button>
-                            <button class="button solid-button white-purple small" data-filter=".websites">Websites
-                            </button>
+                            @endforeach
                         </div>
                         <div id="portfolio" class="portfolio">
-                            <div class="item branding print">
-                                <img src="/v2/images/portfolio01.jpg" alt="alt text" class="img-responsive">
-                                <a href="single-portfolio.html" class="overlay">
-                                    <div class="background"></div>
-                                    <div class="meta">
-                                        <span class="title">Portfolio Item - 01</span>
-                                        <span class="category">Branding, Print</span>
-                                    </div>
-                                    <!-- end .meta -->
-                                </a> <!-- end .overlay -->
-                            </div>
-                            <!-- end .item -->
-                            <div class="item motion">
-                                <img src="/v2/images/portfolio02.jpg" alt="alt text" class="img-responsive">
-                                <a href="single-portfolio.html" class="overlay">
-                                    <div class="background"></div>
-                                    <div class="meta">
-                                        <span class="title">Portfolio Item - 02</span>
-                                        <span class="category">Motion</span>
-                                    </div>
-                                    <!-- end .meta -->
-                                </a> <!-- end .overlay -->
-                            </div>
-                            <!-- end .item -->
-                            <div class="item print">
-                                <img src="/v2/images/portfolio03.jpg" alt="alt text" class="img-responsive">
-                                <a href="single-portfolio.html" class="overlay">
-                                    <div class="background"></div>
-                                    <div class="meta">
-                                        <span class="title">Portfolio Item - 03</span>
-                                        <span class="category">Print</span>
-                                    </div>
-                                    <!-- end .meta -->
-                                </a> <!-- end .overlay -->
-                            </div>
-                            <!-- end .item -->
-                            <div class="item print branding websites">
-                                <img src="/v2/images/portfolio04.jpg" alt="alt text" class="img-responsive">
-                                <a href="single-portfolio.html" class="overlay">
-                                    <div class="background"></div>
-                                    <div class="meta">
-                                        <span class="title">Portfolio Item - 04</span>
-                                        <span class="category">Branding, Websites</span>
-                                    </div>
-                                    <!-- end .meta -->
-                                </a> <!-- end .overlay -->
-                            </div>
-                            <!-- end .item -->
-                            <div class="item print branding">
-                                <img src="/v2/images/portfolio05.jpg" alt="alt text" class="img-responsive">
-                                <a href="single-portfolio.html" class="overlay">
-                                    <div class="background"></div>
-                                    <div class="meta">
-                                        <span class="title">Portfolio Item - 05</span>
-                                        <span class="category">Print, Branding</span>
-                                    </div>
-                                    <!-- end .meta -->
-                                </a> <!-- end .overlay -->
-                            </div>
-                            <!-- end .item -->
-                            <div class="item motion">
-                                <img src="/v2/images/portfolio06.jpg" alt="alt text" class="img-responsive">
-                                <a href="single-portfolio.html" class="overlay">
-                                    <div class="background"></div>
-                                    <div class="meta">
-                                        <span class="title">Portfolio Item - 06</span>
-                                        <span class="category">Motion</span>
-                                    </div>
-                                    <!-- end .meta -->
-                                </a> <!-- end .overlay -->
-                            </div>
-                            <!-- end .item -->
-                            <div class="item motion">
-                                <img src="/v2/images/portfolio07.jpg" alt="alt text" class="img-responsive">
-                                <a href="single-portfolio.html" class="overlay">
-                                    <div class="background"></div>
-                                    <div class="meta">
-                                        <span class="title">Portfolio Item - 07</span>
-                                        <span class="category">Motion</span>
-                                    </div>
-                                    <!-- end .meta -->
-                                </a> <!-- end .overlay -->
-                            </div>
-                            <!-- end .item -->
-                            <div class="item print">
-                                <img src="/v2/images/portfolio08.jpg" alt="alt text" class="img-responsive">
-                                <a href="single-portfolio.html" class="overlay">
-                                    <div class="background"></div>
-                                    <div class="meta">
-                                        <span class="title">Portfolio Item - 08</span>
-                                        <span class="category">Print</span>
-                                    </div>
-                                    <!-- end .meta -->
-                                </a> <!-- end .overlay -->
-                            </div>
-                            <!-- end .item -->
-                            <div class="item motion">
-                                <img src="/v2/images/portfolio09.jpg" alt="alt text" class="img-responsive">
-                                <a href="single-portfolio.html" class="overlay">
-                                    <div class="background"></div>
-                                    <div class="meta">
-                                        <span class="title">Portfolio Item - 09</span>
-                                        <span class="category">Motion</span>
-                                    </div>
-                                    <!-- end .meta -->
-                                </a> <!-- end .overlay -->
-                            </div>
-                            <!-- end .item -->
-                            <div class="item websites">
+                        @foreach($items as $item)
+                            <div class="item @foreach($item->categories as $cat) {{ $cat->name }} @endforeach">
                                 <img src="/v2/images/portfolio10.jpg" alt="alt text" class="img-responsive">
-                                <a href="single-portfolio.html" class="overlay">
+                                <a href="{{ $item->link }}" class="overlay">
                                     <div class="background"></div>
                                     <div class="meta">
-                                        <span class="title">Portfolio Item - 10</span>
-                                        <span class="category">Websites</span>
+                                        <span class="title">{{ $item->name }}</span>
+                                        <span class="category">
+                                        @foreach($item->categories as $cat) 
+                                        {{ $cat->name }} 
+                                        @endforeach
+
+                                        </span>
                                     </div>
                                     <!-- end .meta -->
                                 </a> <!-- end .overlay -->
                             </div>
                             <!-- end .item -->
+                          @endforeach  
                         </div>
                         <!-- end .portfolio -->
-                        <div class="portfolio-load-more">
+                       <!--  <div class="portfolio-load-more">
                             <a href="single-portfolio.html" class="button solid-button white icon-right">Load More
                                 Work<i
                                         class="md-refresh"></i></a>
-                        </div>
+                        </div> -->
                         <!-- end .portfolio-load-more -->
                     </div>
                     <!-- end .portfolio-wrapper -->

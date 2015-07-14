@@ -1546,7 +1546,7 @@ input:not([type=submit]):not([type=file]):focus, select:focus, textarea:focus {
 	background: rgba(124,77,255,.9);
 	width: 100%;
 	height: 100%;
-	cursor: url('../images/cursor.png') 43 43, crosshair;
+	cursor:pointer;
 	box-shadow: 0 2px 6px rgba(0,0,0,.3);
 }
 .portfolio .item .overlay .meta {
