@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 /vendor
+/.phpintel
 /node_modules
 .env
 =======
@@ -53,4 +53,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
->>>>>>> 14849d97414413c65d3ec2cc06a5bb478e317c76
