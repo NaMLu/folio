@@ -288,7 +288,7 @@
         <!-- end .container -->
     </div>
     <!-- end .footer -->
-    <div class="bottom">Copyright &copy; Sility. All Rights Reserved.</div>
+    <div class="bottom">Copyright &copy; Timothy.co.ke All Rights Reserved.</div>
     <!-- end .bottom -->
 </footer>
 <!-- end .footer -->
