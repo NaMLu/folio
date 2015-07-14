@@ -16,6 +16,8 @@
     <link href="{{ asset('/backend/summernote/summernote.css') }}" rel="stylesheet">
     <link href="{{ asset('/backend/summernote/summernote-bs3.css') }}" rel="stylesheet">
     <link href="{{ asset('/backend/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/v2/stylesheets/jquery.growl.css') }}" rel="stylesheet">
+
     @yield('header-stuff')
 
     <!-- Fonts -->
@@ -58,6 +60,7 @@
         <!-- Scripts -->
         <script src="/backend/assets/globals/js/global-vendors.js"></script>
         <script src="/backend/assets/globals/js/pleasure.js"></script>
+        <script src="/v2/javascripts/jquery.growl.js"></script>
         <script src="{{ asset('/backend/summernote/summernote.min.js') }}"></script>
         <script src="{{ asset('/backend/assets/admin1/js/layout.js') }}"></script>
 
