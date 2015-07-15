@@ -375,8 +375,8 @@
                         <div id="portfolio" class="portfolio">
                         @foreach($items as $item)
                             <div class="item @foreach($item->categories as $cat) {{ $cat->name }} @endforeach">
-                                <img src="/v2/images/portfolio10.jpg" alt="alt text" class="img-responsive">
-                                <a href="{{ $item->link }}" class="overlay">
+                                <img src="/uploads/work/{{$item->id}}/thumb.jpg" alt="alt text" class="img-responsive">
+                                <a href="{{ $item->link }}" target="_blank" class="overlay">
                                     <div class="background"></div>
                                     <div class="meta">
                                         <span class="title">{{ $item->name }}</span>

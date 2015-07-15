@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Input;
 use Response;
 use View;
 use App\Option;
+   use Intervention\Image\Facades\Image;
 
 class FolioController extends Controller
 {
@@ -45,20 +46,9 @@ class FolioController extends Controller
      */
     public function store(StoreWorkPostRequest $request)
     {
-        // getting all of the post data
+        // getting images
         $files = Input::file('images');
-        $paths = [];
-        foreach ($files as $file) {
-            // path is root/uploads
-            $destinationPath = 'uploads';
-            $filename = $file->getClientOriginalName();
-            $upload_success = $file->move($destinationPath, $filename);
-            // flash message to show success.
-            if ($upload_success) {
-                $paths[] = 'uploads/' . $filename;
-            }
-        }
-//        create folio item
+        //        create folio item
         $item = new Work();
         $item->name = Input::get('name');
         $item->link = Input::get('link');
@@ -67,8 +57,21 @@ class FolioController extends Controller
         $item->published = true;
         $item->description = INPUT::get('description');
         $item->save();
+        $paths = [];
+        foreach ($files as $file) {
+            // path is root/uploads
+            $destinationPath = public_path() . '/uploads/work/' . $item->id . '/';
+            $filename = $file->getClientOriginalName();
+            $upload_success = $file->move($destinationPath, $filename);
+            if ($upload_success) {
+                $paths[] = 'uploads/' . $filename;
+            }
+        }
+        $img = head($files);
+         self::make_thumb($img, $item);
 //        save categories
         $item->categories()->sync(Input::get('categories'));
+//       create 
 
 //        save photo URLS
         foreach ($paths as $pic) {
@@ -154,4 +157,15 @@ class FolioController extends Controller
         ];
         return redirect()->back()->with('message', 'skill deleted');
     }
+    private function make_thumb($i, $g)
+        {   $arr = array(400, 350, 320, 340, 500);
+            shuffle($arr);
+            $height = head($arr);
+            $width =  last($arr);
+            $filename = $i->getClientOriginalName();
+            $destination = public_path() . '/uploads/work/' . $g->id . '/';
+            $thumb = Image::make($destination . $filename)->fit($width, $height);
+            $thumb->save(($destination . 'thumb.jpg'));
+            return true;
+        }
 }

@@ -147,6 +147,7 @@ return [
         'App\Providers\ConfigServiceProvider',
         'App\Providers\EventServiceProvider',
         'App\Providers\RouteServiceProvider',
+        'Intervention\Image\ImageServiceProvider',
 
     ],
 
@@ -199,6 +200,8 @@ return [
         'HTML'      => 'Illuminate\Html\HtmlFacade',
         'Flash'     => 'Laracasts\Flash\Flash',
         'Carbon'    => 'Carbon\Carbon',
+        'Image'     => 'Intervention\Image\Facades\Image',
+
 
     ],
 

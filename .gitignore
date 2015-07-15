@@ -1,12 +1,13 @@
 /vendor
 /.phpintel
+/public/uploads
 /node_modules
 .env
 =======
 /bootstrap/compiled.php
 .env.*.php
 .env.php
-
+composer.lock
 # =========================
 # Operating System Files
 # =========================
@@ -53,3 +54,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+composer.lock
