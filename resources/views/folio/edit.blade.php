@@ -5,10 +5,10 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading text-center"><h5>create new</h5></div>
+                    <div class="panel-heading text-center"><h5>Edit</h5></div>
                     <div class="panel-body">
 
-                        <form class="" role="form" method="POST" action="{{ url('/portfolio/update') }}">
+                        <form class="" role="form" method="put" action="{{ url('/portfolio/update') }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                             <div class="row">
@@ -18,8 +18,7 @@
 
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-facebook"></i></div>
-                                            <input type="text" name="name" class="form-control" id="name"
-                                                   placeholder="Name">
+                                            {!! Form::text('name', @$work->name, ['class'=>'form-control']) !!}
                                         </div>
                                     </div>
                                 </div>
@@ -29,8 +28,7 @@
 
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-link"></i></div>
-                                            <input type="text" name="link" class="form-control" id="link"
-                                                   placeholder="URL to the project">
+                                            {!! Form::text('link', @$work->link, ['class'=>'form-control']) !!}
                                         </div>
                                     </div>
                                 </div>
@@ -42,8 +40,7 @@
 
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-quote-left"></i></div>
-                                            <input type="text" name="link" class="form-control" id="quote"
-                                                   placeholder="famous quote, init?">
+                                            {!! Form::text('quote', @$work->quote, ['class'=>'form-control']) !!}
                                         </div>
                                     </div>
                                 </div>
@@ -53,8 +50,7 @@
 
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                            <input type="text" name="link" class="form-control" id="person"
-                                                   placeholder="who said that?">
+                                             {!! Form::text('person', @$work->person, ['class'=>'form-control']) !!}
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +60,7 @@
                             <fieldset>
                                 <legend>Description[prose] of the project</legend>
                                 <div class="summernote">
-
+                                    {!! HTML::entities( @$work->description) !!}
                                 </div>
                             </fieldset>
                             <hr/>
@@ -88,7 +84,7 @@
                                 {!! Form::file('images[]', ['multiple'=>true, 'class'=> 'form-control' ]) !!}
                             </fieldset>
                             <hr/>
-                            <input type="submit" class="btn btn-primary btn-block" value="Add a project"/>
+                            <input type="submit" class="btn btn-primary btn-block" value="Update project"/>
                         </form>
                     </div>
                 </div>
@@ -112,5 +108,8 @@
                 ['height', ['height']],
             ]
         });
+         var postForm = function () {
+            var description = $('textarea[name="description"]').html($('#summernote').code());
+        }
     </script>
 @endsection

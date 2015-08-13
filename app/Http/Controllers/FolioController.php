@@ -107,7 +107,9 @@ class FolioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Work::find($id);
+        $site_options = Option::lists('value', 'name');
+        return view('folio.edit', compact('item','site_options'));
     }
 
     /**
@@ -118,7 +120,17 @@ class FolioController extends Controller
      */
     public function update($id)
     {
-        //
+        $item =  Work::find($id);
+        $item->name = Input::get('name');
+        $item->link = Input::get('link');
+        $item->quote = Input::get('quote');
+        $item->person = Input::get('person');
+        $item->published = true;
+        $item->description = INPUT::get('description');
+        $item->save();
+        flash()->success('Item successfully updated!');
+
+        return redirect('portfolio/');
     }
 
     /**

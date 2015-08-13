@@ -33,11 +33,13 @@
                             <!--.row-->
                         </div>
                         <!--.panel-body-->
-                        <div class="panel-footer footer-dark footer-translucent" style="width: 100%; min-height: 20px;">
+                        <a href="/portfolio/{{ $item->id }}/edit">
+                            <div class="panel-footer footer-dark footer-translucent" style="width: 100%; min-height: 20px;">
                             @foreach($item->categories as $cat)
                                 <span class="label label-primary">{{$cat->name}}</span>
                             @endforeach
                         </div>
+                        </a>
                         <!--.panel-footer-->
                     </div>
                     <!--.panel-->
