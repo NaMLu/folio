@@ -9,14 +9,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-7 vertical-center padding-fix">
-                            <h1>Design<sup>+</sup> Develope<sup>+</sup> Interactive<sup>+</sup> Art<sup>+</sup></h1>
+                            <h1>Discover<sup>+</sup> Innovate<sup>+</sup> Build<sup>+</sup> Technology<sup>+</sup>
+                            </h1>
 
                             <p>{{$site_options['about_me_intro_home']}}</p>
 
-                            <p class="button-row"><a href="#" class="button solid-button white">Hire Me Now</a><a
-                                        href="#"
-                                        class="button solid-button purple">Download
-                                    CV</a></p>
+                            <p class="button-row"><a href="#" class="button solid-button white">Hire Me Now</a>
                         </div>
                         <!-- end .col-sm-7 -->
                         <div class="col-sm-5 vertical-center">
@@ -46,12 +44,10 @@
 
                             <p>{{$site_options['about_']}}</p>
 
-                            <div class="signature"><img src="/v2/images/signature.png" alt="signature"
-                                                        class="img-responsive">
-                            </div>
+
                             <ul class="list-unstyled text-uppercase">
-                                <li><b>Date Of Birth:</b> 24 Jan 1989</li>
-                                <li><b>Phone:</b> 012-345-6789</li>
+                                <li><b>Date Of Birth:</b> 25 May 1989</li>
+                                <li><b>Phone:</b> 254-724149923</li>
                                 <li><b>Email:</b> {{$site_options['admin_email']}}</li>
                                 <li><b>Address:</b> Nairobi, Kenya.</li>
                                 <li><b>Website:</b> {{$site_options['site_address']}}</li>
@@ -141,7 +137,7 @@
                     </div>
                     <!-- end .row -->
                     <div class="spacer"></div>
-                    <h4>Language</h4>
+                    <h4>Languages</h4>
 
                     <div class="row">
                         <div class="col-sm-4">
@@ -152,7 +148,7 @@
                                 </div>
                                 <!-- end .circle-progress -->
                                 <div class="circle-progress-label-wrapper"><label class="circle-progress-label">English
-                                        Experienced</label></div>
+                                        Fluent</label></div>
                             </div>
                             <!-- end .circle-progress-wrapper -->
                         </div>
@@ -164,8 +160,8 @@
                                            data-to="80"/>
                                 </div>
                                 <!-- end .circle-progress -->
-                                <div class="circle-progress-label-wrapper"><label class="circle-progress-label">French
-                                        Advanced</label></div>
+                                <div class="circle-progress-label-wrapper"><label class="circle-progress-label">Kiswahili
+                                        Fluent</label></div>
                             </div>
                             <!-- end .circle-progress-wrapper -->
                         </div>
@@ -189,7 +185,7 @@
                 <!-- end .container -->
             </section>
             <!-- end #section1 -->
-
+{{-- 
             <!-- Experience -->
             <section id="section4">
                 <div class="container">
@@ -356,7 +352,7 @@
                 </div>
                 <!-- end .container -->
             </section>
-            <!-- end #section1 -->
+            <!-- end #section1 --> --}}
 
             <!-- Portfolio -->
             <section id="section6">
