@@ -28,8 +28,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('settings', 'HomeController@settings');
     Route::post('settings', 'HomeController@save_settings');
     Route::get('portfolio/{id}/edit', 'FolioController@edit');
-    Route::post('portfolio/{id}/update', 'FolioController@update');
     Route::get('messages', ['as' => 'view-all-messages', 'uses' => 'MessagesController@index']);
     Route::get('messages/{id}', 'MessagesController@show');
+    Route::resource('port', 'FolioController');
 });
 Route::get('portfolio/{id}', 'FolioController@show');

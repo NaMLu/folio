@@ -7,10 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading text-center"><h5>Edit</h5></div>
                     <div class="panel-body">
-
-                        <form enctype="multipart" class="" role="form" method="put" action="{{ url('/portfolio/update') }}">
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
+                            {{ Form::open(['url' => '/folio/'.@$work->id, 'method' =>'put', 'files'=>'true' 'class'=>'form', 'role'=>'form']) }}
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
