@@ -575,7 +575,7 @@
                         <div class="col-sm-5">
                             <h5>Contact Address</h5>
                             <ul class="list-icons list-unstyled">
-                                <li><i class="ion-ios-location-outline"></i>123 Nairobi,<br/>Naiorbi,
+                                <li><i class="ion-ios-location-outline"></i>{{$site_options['my_adress'] or 'Nairobi'}}<br/>Naiorbi,
                                     Kenya.
                                 </li>
                                 <li><i class="ion-iphone"></i>Phone: {{$site_options['mobile_number']}}</li>
@@ -617,7 +617,7 @@
                                     <!-- end .col-sm-10 -->
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Quote</label>
+                                    <label class="col-sm-2 control-label">Quote[IN DOLLARS]</label>
 
                                     <div class="col-sm-10">
                                         <input class="contact-quote" type="number" min="0" step="50" max="50000"
