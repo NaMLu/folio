@@ -8,7 +8,7 @@
                     <div class="panel-heading text-center"><h5>Edit</h5></div>
                     <div class="panel-body">
 
-                        <form class="" role="form" method="put" action="{{ url('/portfolio/update') }}">
+                        <form enctype="multipart" class="" role="form" method="put" action="{{ url('/portfolio/update') }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                             <div class="row">

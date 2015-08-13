@@ -129,6 +129,30 @@ class FolioController extends Controller
         $item->published = true;
         $item->description = INPUT::get('description');
         $item->save();
+        $files = Input::file('images');
+          $paths = [];
+        foreach ($files as $file) {
+            // path is root/uploads
+            $destinationPath = public_path() . '/uploads/work/' . $item->id . '/';
+            $filename = $file->getClientOriginalName();
+            $upload_success = $file->move($destinationPath, $filename);
+            if ($upload_success) {
+                $paths[] = 'uploads/' . $filename;
+            }
+        }
+        $img = head($files);
+         self::make_thumb($img, $item);
+//        save categories
+        $item->categories()->sync(Input::get('categories'));
+//       create 
+
+//        save photo URLS
+        foreach ($paths as $pic) {
+            $p = new Picture();
+            $p->work_id = $item->id;
+            $p->link = $pic;
+            $p->save();
+        }
         flash()->success('Item successfully updated!');
 
         return redirect('portfolio/');
