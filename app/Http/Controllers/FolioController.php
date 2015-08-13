@@ -109,6 +109,7 @@ class FolioController extends Controller
     {
         $item = Work::find($id);
         $site_options = Option::lists('value', 'name');
+        $categories = Category::lists('name', 'id');
         return view('folio.edit', compact('item','site_options'));
     }
 
