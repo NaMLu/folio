@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading text-center"><h5>Edit</h5></div>
                     <div class="panel-body">
-                            {{ Form::open(['url' => '/folio/'.@$work->id, 'method' =>'put', 'files'=>'true', 'class'=>'form', 'role'=>'form']) }}
+                            {!! Form::open(['url' => '/folio/'.@$work->id, 'method' =>'put', 'files'=>'true', 'class'=>'form', 'role'=>'form']) !!}
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
