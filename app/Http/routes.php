@@ -30,6 +30,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('portfolio/{id}/edit', 'FolioController@edit');
     Route::get('messages', ['as' => 'view-all-messages', 'uses' => 'MessagesController@index']);
     Route::get('messages/{id}', 'MessagesController@show');
-    Route::resource('port', 'FolioController');
+    Route::resource('folio', 'FolioController');
 });
 Route::get('portfolio/{id}', 'FolioController@show');
